@@ -1,10 +1,10 @@
 import React from 'react'
 
-function Contact() {
+function Privacy() {
   return (
     <div>
     <div className="other">
-      <h1 className="other_h">Contact</h1>
+      <h1 className="other_h">Privacy Policy</h1>
       <p className="other_p">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae
         neque inventore quae unde, eum rem eligendi itaque tenetur, magnam
@@ -42,8 +42,7 @@ function Contact() {
       </p>
     </div>
   </div>
-    
   )
 }
 
-export default Contact
+export default Privacy

@@ -1,0 +1,71 @@
+@import "../Variables.scss";
+.modal {
+    position: fixed;
+    inset: 0px;
+    --tw-bg-opacity: 0.25;
+    background-color: rgba(0,0,0,0.25);
+    // background: #000;
+    // opacity: 0.25;
+    // opacity: 0.25;
+    // backdrop-filter: opacity(20%);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+
+    .modal_head{
+        width: 420px;
+
+        .modal_title {
+            background: #fff;
+            padding: 0.5rem;
+            border-radius: 0.25rem;
+            display: flex;
+            flex-direction: column;
+          
+            .modal_x {
+                display: flex;
+                justify-content: flex-end;
+                background: transparent;
+                border: none;
+                font-size: 1.2rem;
+                font-weight: 900;
+                color: $gray;
+                cursor: pointer;
+
+                &:hover{
+                    color: $red;
+                }
+
+            }
+
+            .modal_icon {
+                // align-items: center;
+                // justify-content: center;
+                // display: flex;
+                text-align: center;  
+                color: $gray ;
+                font-size: 3rem;  
+                    
+            }
+
+            .modal_text {
+                text-align: center;
+                font-size: 1.2rem;
+                color: $gray;
+            }
+
+
+            .modal_btn {
+                text-align: center;
+                margin-top: 1.5rem;
+                
+                button:nth-child(2){
+                    margin-left: 0.5rem;
+                }
+            }
+        
+        }
+    }
+}

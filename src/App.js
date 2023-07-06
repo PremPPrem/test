@@ -7,10 +7,14 @@ import Pricing from "./pages/Pricing";
 import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
+import { ApiContextProvider } from "./context/ApiContext";
 
 function App() {
   return (
     <div className="App">
+      <ApiContextProvider>
       <Router>
         <Navbar />
         <Routes>
@@ -19,9 +23,12 @@ function App() {
           <Route path="/Services" element={<Services />}></Route>
           <Route path="/Pricing" element={<Pricing />}></Route>
           <Route path="/Contact" element={<Contact />}></Route>
+          <Route path="/Privacy" element={<Privacy />}></Route>
+          <Route path="/Terms" element={<Terms />}></Route>
         </Routes>
         <Footer />
       </Router>
+      </ApiContextProvider>
     </div>
   );
 }

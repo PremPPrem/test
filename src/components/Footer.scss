@@ -1,0 +1,123 @@
+.head_footer {
+    // display: grid;
+    // justify-content: center;
+    // align-content: end;
+    padding: 20px;
+    border-top: 1px solid #aaa;
+ 
+
+    .footer {
+        position: relative;
+        width: 100%;
+        // padding: 20px;
+        
+        
+
+        .footer_item {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 15px;
+            margin-bottom: 20px;
+
+        .footer_img {
+            display: flex;
+            // align-items: start;
+            // justify-content: start;
+            img {
+                width: 200px;
+                height: 50px;
+            }
+        }
+
+ .footer_list {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    .item {
+        position: relative;
+
+        h2 {
+            position: relative;
+            font-weight: 700;
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        li {
+            margin-top: 15px;
+            display: block;
+            color: #aaa;
+
+            a {
+                color: #aaa;
+
+                &:hover {
+                    color: #000;
+                }
+            }
+        }
+    }
+ }
+        }
+
+    }
+    .footer_under {
+        width: 100%;
+        padding-top: 20px;
+        // padding-left: 100px;
+        // padding-right: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid #aaa;
+        color: #808080;
+
+        p{
+            sup {
+                font-size: 0.25rem;
+            }
+        }
+
+        a {
+            color: #808080;
+
+            &:hover{
+                color: #000;
+            }
+
+            .footer_icon {
+                margin-right: 1rem;
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 640px) {
+.head_footer {
+    .footer {
+        .footer_item {
+            display: block;
+            .footer_list {
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                margin-top: 20px;
+
+                .item {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+    .footer_under {
+        display: block;
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+   
+    }
+}
+}

@@ -1,116 +1,183 @@
-
-.navbar_flag {
-    width: 15%;
-    height: auto;
-  
-    margin-right: 5px;
-}
+@import "../Variables.scss";
 
 .navbar {
-    width: 100%;
-    height: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1.2rem;
-    padding: 30px;
-    margin-top: 1rem;
+  width: 100%;
+  height: 60px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  padding: 30px;
+  position: fixed;
+  z-index: 5;
 
- .navbar_left {
+  .nav_left {
     display: flex;
     align-items: center;
-    
-    
-    .navbar_logo {
-        width: 200px;
-        height: 50px;
+
+    .nav_logo {
+      width: 150px;
+      height: 40px;
     }
 
     ul {
-        display: flex;
-        cursor: pointer;
-        margin-left: 5rem;
+      display: flex;
+      cursor: pointer;
+      opacity: 1;
 
-        li {
-            padding: 0 20px;
-            position: relative;
-            font-size: 1.5rem;
-            font-weight: 800;
+      li {
+        padding: 0 20px;
+        list-style: none;
+        position: relative;
 
-            a {
-                color: #000;
-            }
+        a {
+          text-decoration: none;
+          color: #000;
+          font-weight: 700;
+
+          &:hover {
+            color: $blue;
+          }
+          &.active {
+            color: $blue;
+            text-decoration: underline;
+          }
         }
+      }
     }
-    
- }
+  }
 
- .navbar_right {
+  .nav_right {
     display: flex;
-    align-items: center;
 
     .language {
-        padding: 0 20px;
-            position: relative;
-            font-size: 1.5rem;
-            font-weight: 800;
-            border: 3px solid #000;
-            padding: 0.5rem;
+      font-size: 1rem;
+      width: 200px;
     }
 
-    .dropdown {
-        position: relative;
-        display: inline-block;
-      
-      
-        .dropdown-content {
-          display: none;
-          position: absolute;
-          min-width: 160px;
-          z-index: 1;
-          border-radius: 10px;
-      
-          a {
-            color: #000;
-            padding: 12px 16px;
-            text-decoration: none;
+    .navbar_flag {
+      width: 30px;
+      margin-right: 5px;
+    }
+  }
+  .menu_icon {
+    display: none;
+  }
+}
+
+.navbar.colorChange {
+  background: rgba($gray, 0.95);
   
-      
-            &:first-child {
-              border-top: none;
-            }
-      
-            &:hover {
-              background-color: #000;
-              color: #fff;
-            }
-            span {
-              font-size: 1rem;
-              // padding-left: 0.4rem;
-            }
+  .nav_left{
+    ul {
+      li {
+        a {
+          color: #fff;
+
+          &:hover {
+            color: #000;
+          }
+          &.active {
+            color: #000;
+            text-decoration: underline;
           }
         }
-        &:hover .dropdown-content {
-            display: block;
-          }
-    
-          
-    .grid {
-        display: grid;
-        grid-template-columns: auto;
-        padding: 10px;
+      }
+    }
+  }
+  
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    position: fixed;
+    transition: 0.5 height ease-in-out;
+
+    &.expand {
+      height: 100vh;
+
+      .nav_left {
+        ul {
+          position: absolute;
+          top: 120px;
+          left: 0;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
       }
     }
 
-  
-        
-        .menu_icon {
-            display: none;
+    .nav_left {
+      .nav_logo {
+        position: absolute;
+        top: 9px;
+        left: 20px;
+      }
+
+      ul {
+        display: none;
+
+        li {
+          margin: 30px 0;
+          font-size: 2rem;
+
+          a.active {
+            background-color: transparent;
+            border: 0;
+          }
         }
- }
-    
+      }
+    }
+    .nav_right {
+      .language {
+        position: absolute;
+        top: 11px;
+        right: 80px;
+        width: 152px;
+        font-size: 0.8rem;
+      }
+
+      .navbar_flag {
+        width: 20px;
+        margin-right: 3px;
+      }
+
+      .menu_icon {
+        font-size: 2rem;
+        top: 9px;
+        position: absolute;
+        display: block;
+        right: 20px;
+        margin-left: 10px;
+        cursor: pointer;
+        font-weight: 900;
+      }
+    }
+  }
 }
 
+@media (max-width: 410px) {
+  .navbar {
+    .nav_left {
+      .nav_logo {
+        width: 120px;
+        height: 40px;
+      }
+    }
+  }
+}
 
-
-  
+//Fold
+@media (max-width: 360px) {
+  .navbar {
+    .nav_left {
+      .nav_logo {
+        display: none;
+      }
+    }
+  }
+}

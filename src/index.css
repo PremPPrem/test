@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +10,34 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,500;0,600;0,700;0,800;0,900;1,500;1,600&display=swap');
+
+@import './Variables.scss';
+*  {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Kanit', sans-serif;
+}
+
+.other {
+  margin-bottom: 1rem;
+  min-height: 100vh;
+}
+.other_h {
+  text-align: center;
+  margin: 0 auto 1.5rem ;
+  padding-top: 80px;
+}
+
+.other_p {
+  margin-left: 0.5rem;
+  margin-top: 1rem;
+}
+.open_modal {
+  display: flex;
+  justify-content: center;
 }
