@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import "./Services.scss";
 import { ApiContext } from "../context/ApiContext";
 import { AiFillCaretDown } from "react-icons/ai";
+import Sort from "../components/Sort";
 
 
 function Services() {
@@ -11,7 +12,7 @@ function Services() {
   if (loading === true) return <p>Loading...</p>;
   return (
     <div className="services">
-      <h1 className="other_h">Services</h1>
+      <h1 className="services_h">Services</h1>
 
     <div className="dropdown_head">
     <div className="dropdown">
@@ -26,19 +27,29 @@ function Services() {
       </div>
     </div>
 
-      <div className="services_data">
-        {userSort.length &&
+    <div className="services_container">
+     
+     {userSort.length &&
           userSort.map((data, index) => {
             return (
-              <div key={index}>
-                <p>{data.first_name}</p>
-                <p>{data.email}</p>
-                <img src={data.avatar} alt={data.id} />
-              </div>
+            <Sort key={index} {...data} />
             );
           })}
-      </div>
+     </div> 
     </div>
+
+  //  <div className="services_head">
+  //    <div className="services_container">
+     
+  //    {userSort.length &&
+  //         userSort.map((data, index) => {
+  //           return (
+  //           <Sort key={index} {...data} />
+  //           );
+  //         })}
+  //    </div> 
+  //  </div>
+      
   );
 }
 

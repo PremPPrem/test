@@ -1,0 +1,37 @@
+@import '../Variables.scss';
+.sort_container {
+    max-width: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    transform-style: preserve-3d;
+
+    &:hover .sort_card {
+        transform: perspective(500px) rotateY(30deg);
+        background: $red ;
+    }
+
+    .sort_card {
+        position: relative;
+        width: 180px;
+        height: 240px;
+        background: #fff;
+        margin: 10px;
+        border-radius: 4px;
+        box-shadow: 0 5px 15px rgba(#000, 0.1);
+        transition: 0.5s;
+        overflow: hidden;
+        transform-style: preserve-3d;
+        text-align: center;
+
+        h2 {
+            margin-top: 0.25rem;
+        }
+
+        img {
+            border-radius: 50%;
+            margin-top: 1rem;
+        }
+    }
+
+}
