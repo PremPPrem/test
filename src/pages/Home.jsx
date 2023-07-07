@@ -50,8 +50,8 @@ function Home() {
   return (
     <div>
       <Header />
-      <div className="other">
-        <h1 className="other_h">My Home Page</h1>
+      <div className="home_head">
+        <h1 className="home_h">My Home Page</h1>
         <div>
           <div className="home">
             <div className="home_container">
