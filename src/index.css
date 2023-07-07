@@ -34,8 +34,9 @@ code {
 }
 
 .other_p {
-  margin-left: 0.5rem;
-  margin-top: 1rem;
+  /* margin-left: 0.5rem;
+  margin-top: 1rem; */
+  margin: 2rem;
 }
 .open_modal {
   display: flex;
