@@ -1,29 +1,109 @@
 @import "../Variables.scss";
-.card {
-  margin: 2rem 2rem 0;
-  width: 220px;
-  height: 350px;
-  background-color: #fff;
-  border: 3px solid #000;
-  border-radius: 12px;
 
-  img {
-    width: 216px;
-    height: 180px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-  }
 
-  .container {
-    padding: 2px 16px;
+// .card {
+//   margin: 2rem 2rem 0;
+//   width: 220px;
+//   height: 350px;
+//   background-color: #fff;
+//   border: 3px solid #000;
+//   border-radius: 12px;
 
-    h1 {
-      font-size: 1.2rem;
-      margin-bottom: 1rem;
-    }
+//   img {
+//     width: 216px;
+//     height: 180px; 
+//     border-top-left-radius: 10px;
+//     border-top-right-radius: 10px;
+//   }
 
-    p {
-      margin-bottom: 1rem;
+//   .container {
+//     padding: 2px 16px;
+
+//     h1 {
+//       font-size: 1.2rem;
+//       margin-bottom: 1rem;
+//     }
+
+//     p {
+//       margin-bottom: 1rem;
+//     }
+//   }
+// }
+
+
+.card_container {
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // max-width: 1200px;
+  // flex-wrap: wrap;
+  // padding: 40px auto;
+  // background: #ffa500;
+
+
+  .card {
+    position: relative;
+    width: 320px;
+    height: 440px;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.05),inset -5px -5px 5px rgba(255, 255, 255, 0.5),5px 5px 5px rgba(0, 0, 0, 0.05),-5px -5px 5px rgba(255, 255, 255, 0.5) ;
+    border-radius: 15px;
+    margin: 10px;
+
+   
+
+    .card_box {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      right: 20px;
+      bottom: 20px;
+      background: #ebf5fc;
+      box-shadow: 0 10px 20px rgba(#000, 0.1);
+      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.7s;
+
+      &:hover {
+        transform: translateY(-50px);
+        background: #000;
+      }
+
+      &:hover img {
+        transform: scale(1.2);
+      }
+
+      .card_content {
+        padding: 20px;
+        text-align: center;
+
+        img {
+          border-radius: 50%;
+          width: 120px;
+          height: 120px;
+          transition: 0.7s ;
+       
+        }
+
+        h3 {
+          font-size: 1.8rem;
+          color: #777;
+        }
+
+        p {
+          font-size: 1rem;
+          font-weight: 300;
+          color: #777;
+        }
+
+        .card_btn {
+          padding: 8px 20px;
+          margin-top: 15px;
+          box-shadow: 0 10px 20px rgba(#000, 0.2);
+        }
+
+      }
     }
   }
 }

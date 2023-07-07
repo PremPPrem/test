@@ -29,7 +29,7 @@
   border-radius: 50%;
 
   &:hover {
-    color: $gray;
+    color: $orange;
  }
 
 }
@@ -37,6 +37,7 @@
 $blue: #007bff;
 $gray: #6c757d;
 $red: #dc3545;
+$orange: #f59e0b;
 
 .btn_primary {
   @include btn();

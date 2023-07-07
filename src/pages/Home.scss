@@ -11,12 +11,14 @@
         justify-content: center;
         align-items: center;
       
+      
     }
 
 
     .home_left {
         @include arrow;
         left: 5% ;
+        
     }
 
     .home_right {
@@ -29,8 +31,21 @@
 .home_mobile {
     display: none;
 }
+@media (max-width: 1270px) {
+   .home {
+    .home_left {
+     
+        left: 1% ;
+        
+    }
 
-@media (max-width: 640px) {
+    .home_right {
+        @include arrow;
+        right: 1%;
+    }
+   }
+}
+@media (max-width: 768px) {
     .home {
         display: none;
     }
