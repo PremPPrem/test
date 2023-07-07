@@ -32,15 +32,7 @@
 
 
 .card_container {
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
-  // max-width: 1200px;
-  // flex-wrap: wrap;
-  // padding: 40px auto;
-  // background: #ffa500;
-
-
+ 
   .card {
     position: relative;
     width: 320px;
@@ -106,4 +98,14 @@
       }
     }
   }
+}
+
+//Fold
+@media (max-width: 300px) {
+ .card_container {
+  .card {
+    width: 250px;
+    height: 400px;
+  }
+ }
 }

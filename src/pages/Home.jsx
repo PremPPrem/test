@@ -3,6 +3,7 @@ import "./Home.scss";
 import { ApiContext } from "../context/ApiContext";
 import Card from "../components/Card";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
+import Header from "../components/Header";
 
 function Home() {
   const { userCarousel, loading } = useContext(ApiContext);
@@ -48,8 +49,9 @@ function Home() {
 
   return (
     <div>
+      <Header />
       <div className="other">
-        <h1 className="other_h">Home</h1>
+        <h1 className="other_h">My Home Page</h1>
         <div>
           <div className="home">
             <div className="home_container">

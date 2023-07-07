@@ -34,10 +34,23 @@
 
 }
 
+@mixin neno {
+  text-shadow:
+  0 0 7px #000,
+  0 0 10px #fff,
+  0 0 21px #fff,
+  0 0 42px $orange,
+  0 0 82px $orange,
+  0 0 92px $orange,
+  0 0 102px $orange,
+  0 0 151px $orange;
+}
+
 $blue: #007bff;
 $gray: #6c757d;
 $red: #dc3545;
 $orange: #f59e0b;
+
 
 .btn_primary {
   @include btn();
