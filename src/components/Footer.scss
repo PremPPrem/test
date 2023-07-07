@@ -50,6 +50,7 @@
 
             a {
                 color: #aaa;
+                text-decoration: none;
 
                 &:hover {
                     color: #000;
@@ -78,8 +79,12 @@
             }
         }
 
+        li{
+            list-style: none;
+        }
         a {
             color: #808080;
+            
 
             &:hover{
                 color: #000;
