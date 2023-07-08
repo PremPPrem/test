@@ -4,20 +4,7 @@
     margin-bottom: 3rem;
 }
 .home_h {
-  font-size: 3rem;
-  text-align: center;
-  margin: 1rem auto;
-  background: linear-gradient(
-    30deg,
-    #f0e074,
-    #a0332c,
-    #47281d,
-    #c3844d,
-    #f6e5d1
-  );
-  background-size: 40%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+ @include head_text;
 }
 .home {
   position: relative;
@@ -32,30 +19,19 @@
 
   .home_left {
     @include arrow;
-    left: 5%;
+    left: 22px;
   }
 
   .home_right {
     @include arrow;
-    right: 5%;
+    right: 22px;
   }
 }
 
 .home_mobile {
   display: none;
 }
-@media (max-width: 1270px) {
-  .home {
-    .home_left {
-      left: 1%;
-    }
 
-    .home_right {
-      @include arrow;
-      right: 1%;
-    }
-  }
-}
 @media (max-width: 768px) {
   .home {
     display: none;
@@ -91,3 +67,5 @@
     }
   }
 }
+
+

@@ -17,16 +17,19 @@
 }
 
 
+
+
 @mixin arrow {
   position: absolute;
-  top: 35%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  color: #000;
   font-size: 4rem;
-  z-index: 2;
   cursor: pointer;
-  color: #fff;
-  border: 1px solid #000;
-  background-color: #000;
   border-radius: 50%;
+  z-index: 2;
+  padding: 5px;
 
   &:hover {
     color: $orange;
@@ -44,6 +47,23 @@
   0 0 92px $orange,
   0 0 102px $orange,
   0 0 151px $orange;
+}
+
+@mixin head_text {
+  font-size: 3rem;
+  text-align: center;
+  margin: 1rem auto;
+  background: linear-gradient(
+    30deg,
+    #f0e074,
+    #a0332c,
+    #47281d,
+    #c3844d,
+    #f6e5d1
+  );
+  background-size: 40%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 $blue: #007bff;
@@ -111,3 +131,7 @@ $orange: #f59e0b;
     border-color: #b21f2d;
   }
 }
+
+
+
+

@@ -1,0 +1,75 @@
+@import '../Variables.scss';
+
+.other {
+    min-height: 80vh;
+    width: 100%;
+}
+.other_head {
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)),url(../images/other_header_img.jpg);
+    min-height: 80vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+
+    .other_title {
+        font-size: 5rem;
+        color: transparent;
+        position: relative;
+        -webkit-text-stroke: 0.3vw rgba($color: #fff, $alpha: 0.1);
+        
+
+
+        &::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: $orange;
+            -webkit-text-stroke: 0vw rgba($color: #fff, $alpha: 0.1);
+            width: 0%;
+            height: 100%;
+            border-right: 5px solid $orange ;
+            overflow: hidden;
+            animation: animateText 6s linear infinite;
+            
+        }
+    }
+    
+}
+
+
+@keyframes animateText {
+    0%,10%,100%
+    {
+        width: 0;
+    }
+    70%,90%
+    {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 640px) {
+.other_head {
+    .other_title {
+        font-size: 2.5rem;
+    }
+}
+}
+
+
+//fold 
+@media (max-width: 300px) {
+    .other_head {
+        .other_title {
+            font-size: 2rem;
+        }
+    }
+    }

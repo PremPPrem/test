@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import "./App.scss";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
@@ -13,7 +12,7 @@ import { ApiContextProvider } from "./context/ApiContext";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <ApiContextProvider>
       <Router>
         <Navbar />

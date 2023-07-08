@@ -1,2 +1,9 @@
+@import './Variables.scss';
 
 
+.pages {
+ margin-bottom: 3rem;
+}
+.pages_h {
+    @include head_text;
+} 

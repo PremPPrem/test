@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import "./Home.scss";
 import { ApiContext } from "../context/ApiContext";
 import Card from "../components/Card";
-import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
+import { BiSolidLeftArrow,BiSolidRightArrow } from "react-icons/bi";
 import Header from "../components/Header";
 
 function Home() {
@@ -59,8 +59,8 @@ function Home() {
                 return <Card key={index} {...data} />;
               })}
             </div>
-            <AiOutlineArrowLeft className="home_left" onClick={prevPage} />
-            <AiOutlineArrowRight className="home_right" onClick={nextPage} />
+            <BiSolidLeftArrow className="home_left" onClick={prevPage} />
+            <BiSolidRightArrow className="home_right" onClick={nextPage} />
           </div>
           <div className="home_mobile">
             <div className="home_mobile_container">

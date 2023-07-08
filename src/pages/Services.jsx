@@ -3,6 +3,7 @@ import "./Services.scss";
 import { ApiContext } from "../context/ApiContext";
 import { AiFillCaretDown } from "react-icons/ai";
 import Sort from "../components/Sort";
+import OtherHeader from '../components/OtherHeader';
 
 
 function Services() {
@@ -11,7 +12,9 @@ function Services() {
 
   if (loading === true) return <p>Loading...</p>;
   return (
+ <div>
     <div className="services">
+    <OtherHeader />
       <h1 className="services_h">Services</h1>
 
     <div className="dropdown_head">
@@ -36,20 +39,8 @@ function Services() {
             );
           })}
      </div> 
-    </div>
-
-  //  <div className="services_head">
-  //    <div className="services_container">
-     
-  //    {userSort.length &&
-  //         userSort.map((data, index) => {
-  //           return (
-  //           <Sort key={index} {...data} />
-  //           );
-  //         })}
-  //    </div> 
-  //  </div>
-      
+    </div>  
+ </div>    
   );
 }
 
