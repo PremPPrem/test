@@ -37,7 +37,7 @@
 
 }
 
-@mixin neno {
+@mixin neon {
   text-shadow:
   0 0 7px #000,
   0 0 10px #fff,
@@ -50,7 +50,7 @@
 }
 
 @mixin head_text {
-  font-size: 3rem;
+  font-size: 6.5vh;
   text-align: center;
   margin: 1rem auto;
   background: linear-gradient(
