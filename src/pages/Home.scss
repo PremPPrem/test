@@ -19,19 +19,41 @@
 
   .home_left {
     @include arrow;
-    left: 22px;
+    left: 15%;
   }
 
   .home_right {
     @include arrow;
-    right: 22px;
+    right: 15%;
   }
 }
 
 .home_mobile {
   display: none;
 }
+@media (max-width: 1500px) {
+  .home {
+    .home_left {
+      left: 10%;
+    }
 
+    .home_right {
+      right: 10%;
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .home {
+    .home_left {
+      left: 22px;
+    }
+
+    .home_right {
+      right: 22px;
+    }
+  }
+}
 @media (max-width: 768px) {
   .home {
     display: none;
