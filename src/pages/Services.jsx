@@ -7,8 +7,9 @@ import OtherHeader from '../components/OtherHeader';
 
 
 function Services() {
-  const { userSort, loading, sortDataAToZ, sortDataZToA, sortData } =
+  const { userSort, loading, sortDataAToZ, sortDataZToA, sortData,search,word,setWord } =
     useContext(ApiContext);
+  
 
   if (loading === true) return <p>Loading...</p>;
   return (
@@ -16,6 +17,17 @@ function Services() {
     <div className="services">
     <OtherHeader />
       <h1 className="services_h">Services</h1>
+  <div className="search">
+  <label htmlFor="search_form">
+          <input
+            type="text"
+            className="search_input"
+            placeholder="Search name or email"
+            value={word}
+            onChange={(e)=>setWord(e.target.value)}
+          />
+        </label>
+  </div>
 
     <div className="dropdown_head">
     <div className="dropdown">
@@ -32,8 +44,8 @@ function Services() {
 
     <div className="services_container">
      
-     {userSort.length &&
-          userSort.map((data, index) => {
+     {search(userSort).length &&
+          search(userSort).map((data, index) => {
             return (
             <Sort key={index} {...data} />
             );

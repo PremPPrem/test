@@ -8,6 +8,9 @@ export const ApiContextProvider = ({ children }) => {
   const [userSort, setUserSort] = useState([]);
   const [loading, setLoading] = useState(false);
   const [userCarousel,setUserCarousel] = useState([])
+  const [dataFilter] = useState(["first_name","email"])
+  const [word, setWord] = useState("");
+
 
 
    //Sort Data in Services page
@@ -46,6 +49,17 @@ export const ApiContextProvider = ({ children }) => {
   }
 
 
+  const search=(userSort)=>{   
+    return userSort.filter((data)=> {
+      // eslint-disable-next-line
+      return dataFilter.some((filter) => {
+      if(data[filter]){
+        return data[filter].toString().toLowerCase().indexOf(word.toLocaleLowerCase())>-1
+      }
+      })
+    })
+  }
+
   //Carousel in Home page
     const carouselData = async () => {
       setLoading(true);
@@ -66,8 +80,9 @@ export const ApiContextProvider = ({ children }) => {
     sortData();
   }, []);
 
+
   return (
-    <ApiContext.Provider value={{ loading, userSort,userCarousel,sortDataAToZ,sortDataZToA,sortData  }}>
+    <ApiContext.Provider value={{ loading, userSort,userCarousel,sortDataAToZ,sortDataZToA,sortData,search,word,setWord  }}>
       {children}
     </ApiContext.Provider>
   );

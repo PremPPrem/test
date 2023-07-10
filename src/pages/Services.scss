@@ -19,6 +19,31 @@
   margin-bottom: 2rem;
   margin-top: 2rem;
 }
+.search {
+display: flex;
+align-items: center;
+justify-content: center;
+margin-bottom: 3rem;
+margin-top: 2rem;
+
+.search_input {
+  padding: 0.2rem ;
+  font-size: 1.2rem;
+  border-radius: 25px;
+  border: 3px solid #000;
+  background: transparent;
+  outline: none;
+  text-align: center;
+  
+
+  &::placeholder {
+    color: rgba($color: #000000, $alpha: 0.8);
+    text-align: center;
+   
+  }
+
+}
+}
 .dropdown_head {
   display: flex;
   justify-content: flex-end;
